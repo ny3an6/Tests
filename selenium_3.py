@@ -9,15 +9,19 @@ class PythonOrgSearch(unittest.TestCase):
 
     def test_search_in_python_org(self):
         driver = self.driver # (1)
-        driver.get("http://www.python.org")
-        self.assertIn("Python", driver.title)
-        elem = driver.find_element_by_name("hhh")
-        elem.send_keys("pycon")
+        driver.get("http://192.168.5.119/")
+       # self.assertIn("Python", driver.title)
+        elem = driver.find_element_by_class_name("ant-table-row-level-0")
+        elem.submit()
         assert "No results found." not in driver.page_source
-        elem.send_keys(Keys.RETURN)
+       # elem.send_keys(Keys.RETURN)
 
-    def tearDown(self):
-        self.driver.close()
+
+
+
+
+   # def tearDown(self):
+   #     self.driver.close()
 
 if __name__ == "__main__":
     unittest.main()
