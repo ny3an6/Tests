@@ -3,11 +3,12 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 #from selenium.webdriver.common.keys import Keys
+chromedriver = "/home/ny3an6/Документы/chromedriver_linux64/chromedriver"
 
 
 class Pythonsearchforcallcenter(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Firefox()
+        self.driver = webdriver.Chrome(chromedriver)
 
     def test_connect(self):
         driver = self.driver
