@@ -1,6 +1,8 @@
 import unittest
+import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 
 class PythonOrgSearch(unittest.TestCase):
 
@@ -10,13 +12,17 @@ class PythonOrgSearch(unittest.TestCase):
     def test_search_in_python_org(self):
         driver = self.driver # (1)
         driver.get("http://192.168.5.119/")
-       # self.assertIn("Python", driver.title)
-        elem = driver.find_element_by_class_name("ant-table-row-level-0")
-        elem.submit()
-        assert "No results found." not in driver.page_source
-       # elem.send_keys(Keys.RETURN)
-
-
+        login = driver.find_element_by_name("login")
+        password = driver.find_element_by_name("password")
+        login.send_keys("5511")
+        password.send_keys("5511")
+        button = driver.find_element_by_class_name("ant-btn-primary")
+        button.submit()
+        time.sleep(4)      
+        status = driver.find_element_by_class_name("ant-table-row-level-0")      
+        action = ActionChains(driver)
+        action.move_to_element(status).click().perform()
+        
 
 
 
