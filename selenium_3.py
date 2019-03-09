@@ -4,6 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 # https://www.hostinger.ru/rukovodstva/osnovnie-git-komandy
+# http://python-3.ru/page/selenium-python-example
 class PythonOrgSearch(unittest.TestCase):
 
     def setUp(self): # зачем отдельно(1)
@@ -22,7 +23,10 @@ class PythonOrgSearch(unittest.TestCase):
         status = driver.find_element_by_class_name("ant-table-row-level-0")      
         action = ActionChains(driver)
         action.move_to_element(status).click().perform()
-        
+        time.sleep(3)
+        hold_time = driver.find_elements_by_class_name("ant-col-12")
+        for times in hold_time:
+            print("<p>: " % times.get_attribute("p"))
 
 
 
