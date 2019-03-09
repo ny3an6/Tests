@@ -3,7 +3,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
-
+# https://www.hostinger.ru/rukovodstva/osnovnie-git-komandy
 class PythonOrgSearch(unittest.TestCase):
 
     def setUp(self): # зачем отдельно(1)

@@ -31,7 +31,8 @@ def data(l, p, log_name, pass_name):
     close = input("Enter a key to close app")
     if close = 'exit':
         driver.close()	
-	
+	else:
+		pass
 		
  #assert "No results found." not in driver.page_source
 l = input("Enter name of first field: ")

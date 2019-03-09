@@ -2,13 +2,13 @@ import unittest
 import time
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
-#from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.keys import Keys
 chromedriver = "/home/ny3an6/Документы/chromedriver_linux64/chromedriver"
 
 
 class Pythonsearchforcallcenter(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome(chromedriver)
+        self.driver = webdriver.Firefox()
 
     def test_connect(self):
         driver = self.driver
@@ -19,9 +19,12 @@ class Pythonsearchforcallcenter(unittest.TestCase):
         password.send_keys("5511")
         button = driver.find_element_by_class_name("ant-btn-primary")
         button.submit()
-        time.sleep(5)
+        time.sleep(3)
         print("Status: ")
+        a = []
         status = driver.find_element_by_class_name("ant-table-row-level-0")
+        a.append(status)
+        print(len(a))
         action = ActionChains(driver)
         status.click()
 
@@ -32,7 +35,5 @@ class Pythonsearchforcallcenter(unittest.TestCase):
    #     status.submit()
 
 
-
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()
