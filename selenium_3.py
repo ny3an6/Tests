@@ -14,19 +14,19 @@ class PythonOrgSearch(unittest.TestCase):
         driver = self.driver # (1)
         driver.get("http://192.168.5.119/")
         login = driver.find_element_by_name("login")
+        login.send_keys("roma")
         password = driver.find_element_by_name("password")
-        login.send_keys("5511")
-        password.send_keys("5511")
+        password.send_keys("roma")
         button = driver.find_element_by_class_name("ant-btn-primary")
         button.submit()
         time.sleep(4)      
-        status = driver.find_element_by_class_name("ant-table-row-level-0")      
-        action = ActionChains(driver)
-        action.move_to_element(status).click().perform()
-        time.sleep(3)
-        hold_time = driver.find_elements_by_class_name("ant-col-12")
-        for times in hold_time:
-            print("<p>: " % times.get_attribute("p"))
+        #status = driver.find_element_by_class_name("ant-table-row-level-0")      
+        #action = ActionChains(driver)
+        #action.move_to_element(status).click().perform()
+        #time.sleep(3)
+        #hold_time = driver.find_elements_by_class_name("ant-col-12")
+        #for times in hold_time:
+        #    print("<p>: " % times.get_attribute("p"))
 
 
 
