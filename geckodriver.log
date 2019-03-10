@@ -774,3 +774,4 @@ console.log: Accessibility service init or shutdown observer does not exist.
 (firefox-esr:3360): Gtk-WARNING **: Theme parsing error: <data>:1:77: Expected ')' in color definition
 1552249618773	Marionette	INFO	Listening on port 46829
 1552249618788	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: Accessibility service init or shutdown observer does not exist.
