@@ -17,9 +17,9 @@ class PythonOrgSearch(unittest.TestCase):
         driver = self.driver # (1)
         driver.get("http://192.168.5.118/")
         login = driver.find_element_by_name("login")
-        login.send_keys("roma")
+        login.send_keys("xxxx")
         password = driver.find_element_by_name("password")
-        password.send_keys("roma")
+        password.send_keys("xxxx")
         button = driver.find_element_by_class_name("ant-btn-primary")
         button.submit()
 
