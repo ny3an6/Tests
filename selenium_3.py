@@ -15,7 +15,8 @@ class PythonOrgSearch(unittest.TestCase):
 
     def test_search_in_python_org(self):
         driver = self.driver # (1)
-        driver.get("http://192.168.5.118/")
+        driver.get("http://192.168.5.119/")
+        assert "React App" in driver.title
         login = driver.find_element_by_name("login")
         login.send_keys("xxxx")
         password = driver.find_element_by_name("password")
@@ -23,20 +24,24 @@ class PythonOrgSearch(unittest.TestCase):
         button = driver.find_element_by_class_name("ant-btn-primary")
         button.submit()
 
-        driver.wait = WebDriverWait(driver, 10)
-        inf_call = driver.wait.until(EC.presence_of_element_located((By.CLASS_NAME, "ant-table-row-level-0")))     
+        wait = WebDriverWait(driver, 10)
+        inf_call = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "ant-table-row-level-0")))     
         action = ActionChains(driver)
         action.move_to_element(inf_call).click().perform()
-
+     #   time.sleep(2)
         try:
-            hold_time_all = driver.wait.untill(EC.presence_of_element_located((
-                By.CLASS_NAME, "p-font")))
-            asd = hold_time_all.text.split()
-            print(asd[-1])
+             wait_2 = wait.until(EC.visibility_of_all_elements_located((By.CLASS_NAME, "p-font")))      
         except:
             print("Error") 
-
-
+        else:
+           # hold_time_all = wait.until(EC.presence_of_element_located((
+           #     By.CLASS_NAME, "p-font")))
+            asd = wait_2[-1].text.split()
+            print(asd[-1])
+            if int(asd[-1]) <= 0:
+                print("Error, value of waiting time is equally 0 or below")
+        finally:
+            driver.close()
    # def tearDown(self):
    #     self.driver.close()
 
