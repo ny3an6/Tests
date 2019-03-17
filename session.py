@@ -17,11 +17,11 @@ class PythonOrgSearch(unittest.TestCase):
         driver.get("http://192.168.5.118/")
         assert "React App" in driver.title
         login = driver.find_element_by_name("login")
-        login.send_keys("roma")
+        login.send_keys("xxxx")
         password = driver.find_element_by_name("password")
-        password.send_keys("roma")
+        password.send_keys("xxxx")
         workplace = driver.find_element_by_name("phone")
-        workplace.send_keys("2214")
+        workplace.send_keys("xxxx")
         button = driver.find_element_by_class_name("ant-btn-primary")
         button.submit()
 
