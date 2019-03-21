@@ -1946,3 +1946,41 @@ ATTENTION: default value of option force_s3tc_enable overridden by environment.
 console.log: Accessibility service init or shutdown observer does not exist.
 JavaScript error: jar:file:///usr/lib/firefox-esr/omni.ja!/components/nsUrlClassifierListManager.js, line 589: TypeError: this.tablesData[table] is undefined
 *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1552810170333	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.ICLTxs3oUPIL"
+
+(firefox-esr:6433): Gtk-WARNING **: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox-esr:6433): Gtk-WARNING **: Theme parsing error: <data>:1:77: Expected ')' in color definition
+1552810172497	Marionette	INFO	Listening on port 36085
+1552810172542	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: Accessibility service init or shutdown observer does not exist.
+[Parent 6433, Gecko_IOThread] WARNING: pipe error: Обрыв канала: file /build/firefox-esr-itlWhx/firefox-esr-60.5.1esr/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 694
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1552810289518	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.uk12SoNDY5WQ"
+
+(firefox-esr:6692): Gtk-WARNING **: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox-esr:6692): Gtk-WARNING **: Theme parsing error: <data>:1:77: Expected ')' in color definition
+1552810291198	Marionette	INFO	Listening on port 39115
+1552810291234	Marionette	WARN	TLS certificate errors will be ignored for this session
+1552810312012	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.ybMdRJKhmBnl"
+
+(firefox-esr:6858): Gtk-WARNING **: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox-esr:6858): Gtk-WARNING **: Theme parsing error: <data>:1:77: Expected ')' in color definition
+1552810313532	Marionette	INFO	Listening on port 41803
+1552810313619	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: Accessibility service init or shutdown observer does not exist.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+console.log: Accessibility service init or shutdown observer does not exist.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1552810343298	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.uoUeCa5DjIt6"
+
+(firefox-esr:7045): Gtk-WARNING **: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox-esr:7045): Gtk-WARNING **: Theme parsing error: <data>:1:77: Expected ')' in color definition
+1552810344816	Marionette	INFO	Listening on port 42519
+1552810344906	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: Accessibility service init or shutdown observer does not exist.
+[Parent 7045, Gecko_IOThread] WARNING: pipe error: Обрыв канала: file /build/firefox-esr-itlWhx/firefox-esr-60.5.1esr/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 694
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping

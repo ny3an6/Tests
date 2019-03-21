@@ -22,6 +22,8 @@ class PythonOrgSearch(unittest.TestCase):
         login.send_keys("roma")
         password = driver.find_element_by_name("password")
         password.send_keys("roma")
+        workplace = driver.find_element_by_name("phone")
+        workplace.send_keys("2212")
         button = driver.find_element_by_class_name("ant-btn-primary")
         button.submit()
 
@@ -44,8 +46,9 @@ class PythonOrgSearch(unittest.TestCase):
                     os.environ["val"] = "Error, value of waiting time is equally 0 or below"
                     #print("Error, value of waiting time is equally 0 or below")
                 else:
-                    print[]
-
+                    print()
+            except:
+                print("Error")
         finally:
             driver.close()
    # def tearDown(self):
