@@ -13,4 +13,4 @@ search_form.send_keys('real python')
 search_form.submit()
 
 results = browser.find_elements_by_class_name('result')
-print(results[0].text)
+print(results)

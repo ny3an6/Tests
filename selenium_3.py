@@ -8,19 +8,23 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 # https://www.hostinger.ru/rukovodstva/osnovnie-git-komandy
 # http://python-3.ru/page/selenium-python-example
+
+
+chromedriver = "/home/ny3an6/Документы/chromedriver_linux64/chromedriver"
+
 class PythonOrgSearch(unittest.TestCase):
 
-    def setUp(self): # зачем отдельно(1)
-        self.driver = webdriver.Firefox()
+    def setUp(self): 
+        self.driver = webdriver.Chrome(chromedriver)
 
     def test_search_in_python_org(self):
-        driver = self.driver # (1)
+        driver = self.driver
         driver.get("http://192.168.5.119/")
         assert "React App" in driver.title
         login = driver.find_element_by_name("login")
-        login.send_keys("xxxx")
+        login.send_keys("5511")
         password = driver.find_element_by_name("password")
-        password.send_keys("xxxx")
+        password.send_keys("5511")
         button = driver.find_element_by_class_name("ant-btn-primary")
         button.submit()
 
@@ -28,7 +32,7 @@ class PythonOrgSearch(unittest.TestCase):
         inf_call = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "ant-table-row-level-0")))     
         action = ActionChains(driver)
         action.move_to_element(inf_call).click().perform()
-     #   time.sleep(2)
+     
         try:
              wait_2 = wait.until(EC.visibility_of_all_elements_located((By.CLASS_NAME, "p-font")))      
         except:
@@ -48,4 +52,3 @@ class PythonOrgSearch(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 	
-# https://habr.com/ru/post/250921/
