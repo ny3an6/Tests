@@ -23,11 +23,11 @@ class PythonOrgSearch(unittest.TestCase):
 
     def test_Case_1(self):
         driver = self.driver 
-        driver.get("http://192.168.5.118/")
+        driver.get("x")
         assert "React App" in driver.title
-        login = driver.find_element_by_name("login").send_keys("roma")
-        password = driver.find_element_by_name("password").send_keys("roma")
-        workplace = driver.find_element_by_name("phone").send_keys("2214")
+        login = driver.find_element_by_name("login").send_keys("x")
+        password = driver.find_element_by_name("password").send_keys("x")
+        workplace = driver.find_element_by_name("phone").send_keys("x")
         button = driver.find_element_by_class_name("ant-btn-primary").submit()
         driver = self.driver 
         action = ActionChains(driver)
@@ -60,11 +60,11 @@ class PythonOrgSearch(unittest.TestCase):
         
     def test_Case_2(self):
         driver = self.driver 
-        driver.get("http://192.168.5.118/")
+        driver.get("x")
         assert "React App" in driver.title
-        login = driver.find_element_by_name("login").send_keys("roma")
-        password = driver.find_element_by_name("password").send_keys("roma")
-        workplace = driver.find_element_by_name("phone").send_keys("2214")
+        login = driver.find_element_by_name("login").send_keys("x")
+        password = driver.find_element_by_name("password").send_keys("x")
+        workplace = driver.find_element_by_name("phone").send_keys("x")
         button = driver.find_element_by_class_name("ant-btn-primary").submit()
         driver = self.driver 
         action = ActionChains(driver)
