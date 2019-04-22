@@ -14,7 +14,7 @@ class PythonOrgSearch(unittest.TestCase):
 
     def test_search_in_python_org(self):
         driver = self.driver 
-        driver.get("http://192.168.5.118/")
+        driver.get("http://******/")
         assert "React App" in driver.title
         login = driver.find_element_by_name("login")
         login.send_keys("xxxx")
